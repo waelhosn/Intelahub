@@ -10,6 +10,3 @@ runs/
 intelahub_rag.egg-info/
 data/chroma/
 data/hf-cache/
-docs/architecture_decisions.md
-docs/architecture.mmd
-docs/review_notes.md
