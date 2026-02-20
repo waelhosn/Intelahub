@@ -1,0 +1,620 @@
+{
+  "notes": [
+    "Expanded eval set with title, thematic, expansion-probe, and no-result control queries using movies/IDs from your indexed data.",
+    "Graded relevance: 3=ideal, 2=relevant, 1=weakly relevant.",
+    "Includes title, thematic, metadata-filtered, and no-result control queries."
+  ],
+  "queries": [
+    {
+      "query_id": "q_title_interstellar",
+      "query": "Interstellar",
+      "query_type": "title",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [157336],
+      "relevance_by_id": { "157336": 3 },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_title_avatar",
+      "query": "Avatar",
+      "query_type": "title",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [19995, 83533],
+      "relevance_by_id": { "19995": 3, "83533": 2 },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_title_zootopia2",
+      "query": "Zootopia 2",
+      "query_type": "title",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [1084242],
+      "relevance_by_id": { "1084242": 3 },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_title_spongebob",
+      "query": "The SpongeBob Movie",
+      "query_type": "title",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [991494],
+      "relevance_by_id": { "991494": 3 },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_title_avengers",
+      "query": "The Avengers",
+      "query_type": "title",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [24428],
+      "relevance_by_id": { "24428": 3 },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_space_filtered",
+      "query": "space movie",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": {
+        "min_year": 2000,
+        "min_rating": 7.0
+      },
+      "relevant_ids": [157336, 19995, 83533, 1242898, 1272837],
+      "relevance_by_id": {
+        "157336": 3,
+        "19995": 2,
+        "83533": 2,
+        "1242898": 2,
+        "1272837": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_mind_bending_scifi",
+      "query": "mind bending science fiction",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [157336, 434853, 1236153, 1272837, 19995],
+      "relevance_by_id": {
+        "157336": 3,
+        "434853": 2,
+        "1236153": 2,
+        "1272837": 2,
+        "19995": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_ai_judge",
+      "query": "AI judge science fiction thriller",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1236153, 434853, 1272837],
+      "relevance_by_id": {
+        "1236153": 3,
+        "434853": 2,
+        "1272837": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_post_apocalypse",
+      "query": "post apocalyptic survival thriller",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [840464, 1272837, 1198984, 755898],
+      "relevance_by_id": {
+        "840464": 3,
+        "1272837": 2,
+        "1198984": 2,
+        "755898": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_drama_recent_high",
+      "query": "drama movies",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": ["drama"],
+        "min_year": 2015,
+        "min_rating": 7.0
+      },
+      "relevant_ids": [1317288, 1600028, 858024, 1167307, 1368166],
+      "relevance_by_id": {
+        "1317288": 3,
+        "1600028": 3,
+        "858024": 3,
+        "1167307": 2,
+        "1368166": 2
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_animation_family",
+      "query": "animated family movie",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": ["animation"],
+        "min_year": 2010
+      },
+      "relevant_ids": [1084242, 991494, 1297842, 1311031, 1167307],
+      "relevance_by_id": {
+        "1084242": 3,
+        "991494": 3,
+        "1297842": 2,
+        "1311031": 2,
+        "1167307": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_action_crime_recent",
+      "query": "action crime thriller",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": ["action", "crime"],
+        "min_year": 2025,
+        "min_rating": 6.0
+      },
+      "relevant_ids": [1419406, 1242501, 1306368, 1171145, 1290821],
+      "relevance_by_id": {
+        "1419406": 3,
+        "1242501": 3,
+        "1306368": 2,
+        "1171145": 2,
+        "1290821": 2
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_horror_thriller_recent",
+      "query": "horror thriller",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": ["horror", "thriller"],
+        "min_year": 2025
+      },
+      "relevant_ids": [1198984, 1373198, 1315303, 1110034, 1272837, 1563506, 1503900],
+      "relevance_by_id": {
+        "1198984": 3,
+        "1272837": 3,
+        "1315303": 2,
+        "1110034": 2,
+        "1563506": 2,
+        "1373198": 2,
+        "1503900": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_romance_drama",
+      "query": "romance drama movie",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1316092, 666433, 1254754, 1317672, 858024],
+      "relevance_by_id": {
+        "1316092": 3,
+        "858024": 3,
+        "1317672": 2,
+        "666433": 2,
+        "1254754": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_detective_mystery",
+      "query": "detective mystery thriller",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1310568, 1528660, 1368166, 425274],
+      "relevance_by_id": {
+        "1310568": 3,
+        "1528660": 3,
+        "1368166": 2,
+        "425274": 2
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_war_tank",
+      "query": "war tank movie",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1252037],
+      "relevance_by_id": {
+        "1252037": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_astronaut_comedy",
+      "query": "astronaut romantic comedy",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1254754],
+      "relevance_by_id": {
+        "1254754": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_giant_snake",
+      "query": "giant snake jungle movie",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1234731],
+      "relevance_by_id": {
+        "1234731": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_heist_illusionists",
+      "query": "magician heist movie",
+      "query_type": "theme",
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [425274],
+      "relevance_by_id": {
+        "425274": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_scifi_2025_high",
+      "query": "science fiction",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": ["science fiction"],
+        "min_year": 2025,
+        "min_rating": 7.0
+      },
+      "relevant_ids": [83533, 1242898, 1311031, 1272837],
+      "relevance_by_id": {
+        "83533": 3,
+        "1242898": 3,
+        "1311031": 2,
+        "1272837": 2
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_comedy_2025plus",
+      "query": "comedy movie",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": ["comedy"],
+        "min_year": 2025
+      },
+      "relevant_ids": [991494, 1297842, 1234731, 1242501, 1254754],
+      "relevance_by_id": {
+        "991494": 3,
+        "1297842": 2,
+        "1234731": 2,
+        "1254754": 2,
+        "1242501": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_deep_sea_ghost",
+      "query": "deep sea ghost pirate adventure",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [991494],
+      "relevance_by_id": {
+        "991494": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_space_engine",
+      "query": "forbidden space engine thriller",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [434853, 1236153, 1272837],
+      "relevance_by_id": {
+        "434853": 3,
+        "1236153": 2,
+        "1272837": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_train_crisis",
+      "query": "high speed train crisis movie",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1271895],
+      "relevance_by_id": {
+        "1271895": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_faith_kingdom",
+      "query": "shepherd faith kingdom epic",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1167307, 1511417],
+      "relevance_by_id": {
+        "1167307": 3,
+        "1511417": 2
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_magic_heist_team",
+      "query": "illusionists team heist mystery",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [425274],
+      "relevance_by_id": {
+        "425274": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_plane_crash_island",
+      "query": "plane crash deserted island survival",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1198994, 840464],
+      "relevance_by_id": {
+        "1198994": 3,
+        "840464": 1
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_frozen_lake_chase",
+      "query": "frozen lake chase thriller",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1242501],
+      "relevance_by_id": {
+        "1242501": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_comet_bunker",
+      "query": "comet bunker family survival journey",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [840464],
+      "relevance_by_id": {
+        "840464": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_wormhole_mission",
+      "query": "wormhole mission",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [157336],
+      "relevance_by_id": {
+        "157336": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_illusionist_heist",
+      "query": "illusionist diamond heist",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [425274],
+      "relevance_by_id": {
+        "425274": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_ghost_pirate",
+      "query": "ghost pirate adventure",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [991494],
+      "relevance_by_id": {
+        "991494": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_expansion_frozen_lake_escape",
+      "query": "frozen lake escape",
+      "query_type": "theme",
+      "tags": ["expansion_probe", "theme_no_filters"],
+      "top_k": 10,
+      "filters": null,
+      "relevant_ids": [1242501],
+      "relevance_by_id": {
+        "1242501": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_no_results_1800s_scifi",
+      "query": "silent black and white space opera from 1800s",
+      "query_type": "theme",
+      "top_k": 5,
+      "filters": {
+        "max_year": 1899
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_documentary_old",
+      "query": "historical documentary",
+      "query_type": "mixed",
+      "top_k": 5,
+      "filters": {
+        "genres": ["documentary"],
+        "max_year": 1950,
+        "min_rating": 8.5
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_western_midcentury",
+      "query": "western movie",
+      "query_type": "mixed",
+      "top_k": 5,
+      "filters": {
+        "genres": ["western"],
+        "min_year": 1950,
+        "max_year": 1990
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_quantum_llama_opera",
+      "query": "silent quantum llama accountants composing tax opera on mars in 1492",
+      "query_type": "theme",
+      "tags": ["no_results_probe", "theme_no_filters"],
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_underwater_blockchain_cowboy",
+      "query": "underwater cowboy blockchain romance in antarctica",
+      "query_type": "theme",
+      "tags": ["no_results_probe", "theme_no_filters"],
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_medieval_robot_courtroom",
+      "query": "medieval robot courtroom musical documentary",
+      "query_type": "theme",
+      "tags": ["no_results_probe", "theme_no_filters"],
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_penguin_stock_market",
+      "query": "penguin stock market biopic documentary on the moon",
+      "query_type": "theme",
+      "tags": ["no_results_probe", "theme_no_filters"],
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_impossible_animation_1900",
+      "query": "animated family movie",
+      "query_type": "mixed",
+      "top_k": 5,
+      "filters": {
+        "genres": ["animation"],
+        "max_year": 1900,
+        "min_rating": 9.0
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_impossible_scifi_early",
+      "query": "science fiction movie",
+      "query_type": "mixed",
+      "top_k": 5,
+      "filters": {
+        "genres": ["science fiction"],
+        "max_year": 1950,
+        "min_rating": 9.0
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_impossible_war_recent",
+      "query": "war movie",
+      "query_type": "mixed",
+      "top_k": 5,
+      "filters": {
+        "genres": ["war"],
+        "min_year": 2020,
+        "min_rating": 8.5
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    },
+    {
+      "query_id": "q_no_results_impossible_documentary_modern",
+      "query": "documentary movie",
+      "query_type": "mixed",
+      "top_k": 5,
+      "filters": {
+        "genres": ["documentary"],
+        "min_year": 2000,
+        "min_rating": 7.5
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    }
+  ]
+}

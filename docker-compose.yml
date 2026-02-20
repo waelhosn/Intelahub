@@ -1,0 +1,16 @@
+services:
+  api:
+    container_name: intelahub-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        INSTALL_RERANKER: ${INSTALL_RERANKER:-0}
+    image: intelahub-api:latest
+    env_file:
+      - .env
+    ports:
+      - "8090:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

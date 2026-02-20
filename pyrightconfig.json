@@ -1,0 +1,18 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "include": [
+    "app",
+    "scripts",
+    "tests"
+  ],
+  "executionEnvironments": [
+    {
+      "root": ".",
+      "extraPaths": [
+        "."
+      ]
+    }
+  ],
+  "typeCheckingMode": "basic"
+}

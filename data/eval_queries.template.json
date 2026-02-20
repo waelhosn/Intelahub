@@ -1,0 +1,75 @@
+{
+  "notes": [
+    "Fill relevant_ids and relevance_by_id after your index is ingested.",
+    "Use relevance_by_id values (e.g. 3,2,1) for graded relevance if available.",
+    "Set expect_no_results=true for queries that should intentionally return no relevant results."
+  ],
+  "queries": [
+    {
+      "query_id": "q_title_interstellar",
+      "query": "Interstellar",
+      "query_type": "title",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [157336],
+      "relevance_by_id": {
+        "157336": 3
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_space",
+      "query": "space movie",
+      "query_type": "theme",
+      "top_k": 5,
+      "filters": {
+        "min_year": 2000,
+        "min_rating": 7.0
+      },
+      "relevant_ids": [157336, 19995],
+      "relevance_by_id": {
+        "157336": 3,
+        "19995": 2
+      },
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_theme_mind_bending",
+      "query": "mind bending science fiction",
+      "query_type": "theme",
+      "top_k": 5,
+      "filters": null,
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_filter_drama_recent",
+      "query": "drama movies",
+      "query_type": "mixed",
+      "top_k": 10,
+      "filters": {
+        "genres": [
+          "drama"
+        ],
+        "min_year": 2015,
+        "min_rating": 7.0
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": false
+    },
+    {
+      "query_id": "q_no_results_control",
+      "query": "silent black and white space opera from 1800s",
+      "query_type": "theme",
+      "top_k": 5,
+      "filters": {
+        "max_year": 1899
+      },
+      "relevant_ids": [],
+      "relevance_by_id": {},
+      "expect_no_results": true
+    }
+  ]
+}

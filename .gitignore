@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+*.pyc
+.vscode/
+*.log
+server.log
+runs/
+intelahub_rag.egg-info/
+data/chroma/
+data/hf-cache/
+docs/architecture_decisions.md
+docs/architecture.mmd
+docs/review_notes.md
