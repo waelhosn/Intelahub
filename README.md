@@ -2,6 +2,10 @@
 
 this repo is the movie retrieval backend for the assessment
 
+## architecture
+
+![architecture diagram](docs/diagram.gif)
+
 what is inside
 - tmdb ingestion for 200 plus movies
 - embeddings with openai by default
